@@ -9,7 +9,7 @@ use std::env;
 ///
 /// Input is read from stdin until EOF, output to stdout. The the first half of
 /// the input lines will become the first block.
-fn main() {
+pub fn main() {
     run().unwrap();
 }
 
