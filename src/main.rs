@@ -21,6 +21,8 @@ fn main() {
 fn run() -> Result<(), Box<Error>> {
     let lines_per_block: usize =
         try!(try!(env::args().nth(1).ok_or(ARG_MISSING)).parse());
+    let separator: String = env::args().nth(2).unwrap_or("".to_string());
+
     let mut buffer = String::new();
     try!(stdin().read_to_string(&mut buffer));
     let lines: Vec<&str> = buffer.lines().collect();
@@ -29,7 +31,7 @@ fn run() -> Result<(), Box<Error>> {
     let first = &lines[0..lines_per_block];
     let second = &lines[lines_per_block..];
     for (&left, &right) in first.iter().zip(second.iter()) {
-        println!("{}{}", left, right);
+        println!("{}{}{}", left, separator, right);
     }
     Ok(())
 }
