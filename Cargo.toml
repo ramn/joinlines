@@ -2,5 +2,13 @@
 name = "joinlines"
 version = "0.1.0"
 authors = ["ramn <github@rymdimperiet.org>"]
+description = "CLI util for joining lines of a text file"
+
+#documentation = ""
+homepage = "https://github.com/ramn/joinlines"
+repository = "https://github.com/ramn/joinlines"
+readme = "README.md"
+license = "MIT/Apache-2.0"
+keywords = ["join", "text", "lines"]
 
 [dependencies]
