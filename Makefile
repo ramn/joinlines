@@ -1,10 +1,10 @@
 SHELL=bash
 
-test: test_with_default_separator test_with_separator
+test: build test_with_default_separator test_with_separator
 	@echo "All tests pass"
 
 build:
-	cargo build
+	@cargo build
 
 test_with_default_separator:
 	@diff <(./target/debug/joinlines < ./resources/testfile.txt) \
