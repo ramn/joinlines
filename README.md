@@ -1,13 +1,11 @@
 Joinlines
 =========
 
-Joins two blocks of text, such that row 1 of the first block will be
-appended to row 1 of the second block and so on.
+Joins two blocks of text, such that row 1 of the first block will be appended
+to row 1 of the second block and so on.
 
-Takes an argument `<lines_per_block>` which is the number of lines in a block.
-Both blocks must be of equal size.
-
-Input is read from stdin, output to stdout.
+Input is read from stdin until EOF, output to stdout. The the first half of the
+input lines will become the first block.
 
 Install
 =======
@@ -25,7 +23,7 @@ Example
     b
     c
 
-    # joinlines 3 ',' < f.txt
+    # joinlines ',' < f.txt
     1,a
     2,b
     3,c

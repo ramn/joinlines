@@ -7,9 +7,9 @@ build:
 	cargo build
 
 test_with_default_separator:
-	@diff <(./target/debug/joinlines 5 < ./resources/testfile.txt) \
+	@diff <(./target/debug/joinlines < ./resources/testfile.txt) \
 		./resources/expected.txt
 
 test_with_separator:
-	@diff <(./target/debug/joinlines 5 ' --!-- ' < ./resources/testfile.txt) \
+	@diff <(./target/debug/joinlines ' --!-- ' < ./resources/testfile.txt) \
 		./resources/expected2.txt
