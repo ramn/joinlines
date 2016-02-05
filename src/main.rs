@@ -15,7 +15,6 @@ fn main() {
 
 fn run() -> Result<(), Box<Error>> {
     let separator: String = env::args().nth(1).unwrap_or("".to_string());
-
     let mut buffer = String::new();
     try!(stdin().read_to_string(&mut buffer));
     let lines: Vec<&str> = buffer.lines().collect();
