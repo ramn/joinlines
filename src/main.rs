@@ -18,9 +18,7 @@ fn run() -> Result<(), Box<Error>> {
     let mut buffer = String::new();
     try!(stdin().read_to_string(&mut buffer));
     let lines: Vec<&str> = buffer.lines().collect();
-    let lines_per_block = lines.len() / 2;
-    let first = &lines[0..lines_per_block];
-    let second = &lines[lines_per_block..];
+    let (first, second) = lines.split_at(lines.len() / 2);
     for (&left, &right) in first.iter().zip(second.iter()) {
         println!("{}{}{}", left, separator, right);
     }
