@@ -1,15 +1,15 @@
+//! Joins two blocks of text, such that row 1 of the first block will be
+//! appended to row 1 of the second block and so on.
+//!
+//! Input is read from stdin until EOF, output to stdout. The the first half of
+//! the input lines will become the first block.
+
 use std::io::prelude::*;
 use std::io::stdin;
 use std::error::Error;
 use std::env;
 
-
-/// Joins two blocks of text, such that row 1 of the first block will be
-/// appended to row 1 of the second block and so on.
-///
-/// Input is read from stdin until EOF, output to stdout. The the first half of
-/// the input lines will become the first block.
-pub fn main() {
+fn main() {
     run().unwrap();
 }
 
