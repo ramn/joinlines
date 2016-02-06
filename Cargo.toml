@@ -1,6 +1,6 @@
 [package]
 name = "joinlines"
-version = "0.3.0"
+version = "0.3.1"
 authors = ["ramn <github@rymdimperiet.org>"]
 description = "CLI util for joining lines of a text file"
 
