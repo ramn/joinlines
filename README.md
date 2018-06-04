@@ -33,3 +33,7 @@ Test
 ====
 
   make test
+
+TODO
+====
+* Support ignoring lines starting with a prefix
